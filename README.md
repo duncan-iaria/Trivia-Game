@@ -1,7 +1,7 @@
 # Trivia Game
 _built in angularjs_
 
-## Goals
+### Goals:
 1. Learn AngularJS
 2. Use GitHub appropriately with multiple branches
 3. Use JSON for data
