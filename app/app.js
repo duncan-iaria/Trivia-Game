@@ -21,7 +21,10 @@ app.config( function( $stateProvider, $urlRouterProvider )
     name: 'question',
     url: '/question',
     component: 'question',
-    resolve: { questions: function( QuestionService ){ return QuestionService.getAllQuestions(); } }
+    resolve: { 
+                questions: function( QuestionService ){ return QuestionService.getAllQuestions(); },
+                answers: function( QuestionService ){ return QuestionService.getAllAnswers(); } 
+              }
   }
 
   $stateProvider.state( mainState );
