@@ -1,60 +1,57 @@
-{
-	"questions" : 
-	[
-		{ 
-			"question" : "What color is Sophie the dog?",
+[
+	{ 
+		"question" : "What color is Sophie the dog?",
 
-			"answers" : 
-			[
-				{
-					"text" : "Red",
-					"isCorrect" : true,
-					"feedback" : "Yas that is correct, she red!" 
-				},
-				{
-					"text" : "Blue",
-					"isCorrect" : false,
-					"feedback" : "I've never seen a blue dog before, have you?"
-				},
-				{
-					"text" : "Green",
-					"isCorrect" : false,
-					"feedback" : "She not an alien, you doofus."
-				},
-				{
-					"text" : "Purple",
-					"isCorrect" : false,
-					"feedback" : "I like purple, but that ain't right."
-				}
-			]
-		},
+		"answers" : 
+		[
+			{
+				"text" : "Red",
+				"isCorrect" : true,
+				"feedback" : "Yas that is correct, she red!" 
+			},
+			{
+				"text" : "Blue",
+				"isCorrect" : false,
+				"feedback" : "I've never seen a blue dog before, have you?"
+			},
+			{
+				"text" : "Green",
+				"isCorrect" : false,
+				"feedback" : "She not an alien, you doofus."
+			},
+			{
+				"text" : "Purple",
+				"isCorrect" : false,
+				"feedback" : "I like purple, but that ain't right."
+			}
+		]
+	},
 
-		{ 
-			"question" : "What is Sophie the dog's nickname?",
+	{ 
+		"question" : "What is Sophie the dog's nickname?",
 
-			"answers" : 
-			[
-				{
-					"text" : "Goofus",
-					"isCorrect" : true,
-					"feedback" : "This was the only incorrect answer..." 
-				},
-				{
-					"text" : "The Prime One",
-					"isCorrect" : true,
-					"feedback" : "Yes, she is the Prime One - the perfect dog."
-				},
-				{
-					"text" : "Mungus",
-					"isCorrect" : true,
-					"feedback" : "You're right! This is a weird one, I admit."
-				},
-				{
-					"text" : "Monkey",
-					"isCorrect" : true,
-					"feedback" : "Correct, she is a monkey dog!"
-				}
-			]
-		}
-	]
-}
+		"answers" : 
+		[
+			{
+				"text" : "Goofus",
+				"isCorrect" : true,
+				"feedback" : "This was the only incorrect answer..." 
+			},
+			{
+				"text" : "The Prime One",
+				"isCorrect" : true,
+				"feedback" : "Yes, she is the Prime One - the perfect dog."
+			},
+			{
+				"text" : "Mungus",
+				"isCorrect" : true,
+				"feedback" : "You're right! This is a weird one, I admit."
+			},
+			{
+				"text" : "Monkey",
+				"isCorrect" : true,
+				"feedback" : "Correct, she is a monkey dog!"
+			}
+		]
+	}
+]

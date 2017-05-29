@@ -21,6 +21,7 @@ app.config( function( $stateProvider, $urlRouterProvider )
     name: 'question',
     url: '/question',
     component: 'question',
+    resolve: { questions: function( QuestionService ){ return QuestionService.getAllQuestions(); } }
   }
 
   $stateProvider.state( mainState );
