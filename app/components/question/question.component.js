@@ -1,3 +1,14 @@
+angular.module( 'trivia' ).component( 'question', 
+{
+	templateUrl: 'app/components/question/question.html',
+	controller: QuestionController,
+	bindings: 
+	{
+		questions: '<',
+		//onNextQuestion: '&'
+	},
+});
+
 function QuestionController()
 {
 	var controller = this;
@@ -30,15 +41,3 @@ function QuestionController()
 		}
 	}
 }
-
-
-angular.module( 'trivia' ).component( 'question', 
-{
-	templateUrl: 'app/components/question/question.html',
-	controller: QuestionController,
-	bindings: 
-	{
-		questions: '<',
-		//onNextQuestion: '&'
-	},
-});
