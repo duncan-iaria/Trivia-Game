@@ -1,1 +1,22 @@
-<h3>questions</h3>
+<div>
+	<h3>questions</h3>
+
+	{{$ctrl.questions[ $ctrl.currentQuestion ].question }}
+
+	<!-- <li ng-repeat="questions in $ctrl.questions">
+		{{questions.question}}<br/>
+		{{questions.answers[0].text}}<br/>
+		{{questions.answers[1].text}}<br/>
+		{{questions.answers[2].text}}<br/>
+		{{questions.answers[3].text}}
+	</li> -->	
+	<br/><br/>
+	<!-- FOR EACH ANSWER, SHOW THE CORRESPONDING TEXT -->
+	<li ng-repeat="answers in $ctrl.questions[ $ctrl.currentQuestion ].answers">
+		{{answers.text}}
+	</li>
+	<br/><br/>
+
+	<button ng-click="$ctrl.prevQuestion()"> < </button>
+	<button ng-click="$ctrl.nextQuestion()"> > </button>
+</div>
