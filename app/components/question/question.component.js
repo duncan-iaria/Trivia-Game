@@ -9,11 +9,14 @@ angular.module( 'trivia' ).component( 'question',
 	},
 });
 
-function QuestionController()
+function QuestionController( $timeout, $state )
 {
 	var controller = this;
 	
 	controller.currentQuestion = 0;
+	controller.isFeedbackMode = false;
+	controller.currentFeedback;
+	controller.feedbackDuration = 3000; //time until the next quesition is show
 
 	controller.nextQuestion = function()
 	{
@@ -27,6 +30,8 @@ function QuestionController()
 		{
 			controller.currentQuestion++;
 		}
+
+		controller.isFeedbackMode = false;
 	}
 
 	controller.prevQuestion = function()
@@ -39,5 +44,30 @@ function QuestionController()
 		{
 			controller.currentQuestion--;
 		}
+
+		controller.isFeedbackMode = false;
+	}
+
+	//TODO explore alternate methods of displaying the feedback (dont love passing as param)
+	controller.evaluateAnswer = function( tIsCorrect, tFeedback )
+	{
+		if( tIsCorrect )
+		{
+			//answer is correct
+			console.log( "CORRECT!" );
+		}
+		else
+		{
+			console.log( "INCORRECT!" );
+			//answer is incorrect - you lose
+		}
+
+		controller.currentFeedback = tFeedback;
+		controller.isFeedbackMode = true;
+
+		//$state.go( 'timer' );
+
+		$timeout( controller.nextQuestion, controller.feedbackDuration );
+
 	}
 }
