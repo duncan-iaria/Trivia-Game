@@ -34,7 +34,7 @@
 		[
 			{
 				"text" : "Goofus",
-				"isCorrect" : true,
+				"isCorrect" : false,
 				"feedback" : "This was the only incorrect answer..." 
 			},
 			{
