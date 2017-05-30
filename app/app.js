@@ -23,11 +23,20 @@ app.config( function( $stateProvider, $urlRouterProvider )
     component: 'question',
     resolve: { 
                 questions: function( QuestionService ){ return QuestionService.getAllQuestions(); },
-                answers: function( QuestionService ){ return QuestionService.getAllAnswers(); } 
+                //TODO remove this or make it work
+                //answers: function( QuestionService ){ return QuestionService.getAllAnswers(); } 
               }
   }
+
+  var resultsState =
+  {
+    name: 'results',
+    url: '/results',
+    component: 'results',
+  } 
 
   $stateProvider.state( mainState );
   $stateProvider.state( timerState );
   $stateProvider.state( questionState );
+  $stateProvider.state( resultsState );
 });
