@@ -22,11 +22,11 @@
 <body ng-app="trivia">
 
   <!-- TEST NAV -->
-  <a ui-sref="main" ui-sref-active="active">main</a>
+<!--   <a ui-sref="main" ui-sref-active="active">main</a>
   <a ui-sref="timer@main" ui-sref-active="active">timer</a>
   <a ui-sref="question@main" ui-sref-active="active">question</a>
   <a ui-sref="results" ui-sref-active="active">results</a>
-  <a ui-sref="game" ui-sref-active="active">game</a>
+  <a ui-sref="game" ui-sref-active="active">game</a> -->
 
   <div ui-view="starter"></div>
   <div ui-view="timer"></div>
@@ -37,7 +37,10 @@
   <script src="app/vendor/angular-ui-router.min.js"></script>
   <script src="app/app.js"></script>
 
-  <script type="text/javascript" src="app/components/main/main.component.js"></script>
+  <!-- SERVICES -->
+  <script type="text/javascript" src="app/shared/services/question.service.js"></script>
+  <script type="text/javascript" src="app/shared/services/game-data.service.js"></script>
+  <script type="text/javascript" src="app/shared/services/timer.service.js"></script>
 
   <!-- STARTER -->
   <script type="text/javascript" src="app/components/starter/starter.component.js"></script>
@@ -48,7 +51,6 @@
 
   <!-- QUESTIONS -->
   <script type="text/javascript" src="app/components/question/question.component.js"></script>
-  <script type="text/javascript" src="app/shared/services/question.service.js"></script>
 
   <!-- RESULTS -->
   <script type="text/javascript" src="app/components/results/results.component.js"></script>

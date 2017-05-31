@@ -1,14 +1,35 @@
 
-function TimerController( $interval )
+function TimerController( $interval, TimerService )
 {
 	var controller = this;
 
 	controller.isEnabled = true;
-	controller.timeLimit = 25;
+	controller.timeLimit = 4;
 	controller.currentTime = controller.timeLimit;
 	controller.timerInterval;
 	
 	//METHODS
+	controller.$onInit = function()
+	{
+		controller.startTimer();
+
+		//subcribe to events
+		TimerService.subscribeToRestart( controller );
+		TimerService.subscribeToPause( controller );
+	}
+
+	controller.$onDestroy = function()
+	{
+		if( controller.timerInterval != null )
+		{
+			$interval.cancel( controller.timerInterval );
+		}
+
+		//unsub to events
+		TimerService.unsubscribeToRestart( controller );
+		TimerService.unsubscribeToPause( controller );
+	}
+
 	controller.startTimer = function()
 	{
 		//clear interval if it's already running
@@ -40,9 +61,10 @@ function TimerController( $interval )
 
 	controller.timeUp = function()
 	{
-		console.log( "well you fucked up" );
+		//console.log( "well you fucked up" );
 		controller.isEnabled = false;
 		$interval.cancel( controller.timerInterval );
+		TimerService.timeUp();
 	}
 
 	//CONTROLS
@@ -71,5 +93,15 @@ function TimerController( $interval )
 		}
 	}
 
-	controller.startTimer();
+	//EVENTS
+	//called from TimerService
+	controller.onRestart = function()
+	{
+		controller.startTimer();
+	}
+
+	controller.onPause = function()
+	{
+		controller.pause();
+	}
 }
