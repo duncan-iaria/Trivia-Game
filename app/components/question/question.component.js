@@ -9,7 +9,7 @@ angular.module( 'trivia' ).component( 'question',
 	},
 });
 
-function QuestionController( $timeout, $state )
+function QuestionController( $timeout, $state, GameDataService, TimerService )
 {
 	var controller = this;
 	
@@ -17,6 +17,16 @@ function QuestionController( $timeout, $state )
 	controller.isFeedbackMode = false;
 	controller.currentFeedback;
 	controller.feedbackDuration = 3000; //time until the next quesition is show
+
+	controller.$onInit = function()
+	{
+		TimerService.subscribeToTimeUp( controller );
+	}
+
+	controller.$onDestroy = function()
+	{
+		TimerService.unsubscribeToTimeUp( controller );
+	}
 
 	controller.nextQuestion = function()
 	{
@@ -30,6 +40,7 @@ function QuestionController( $timeout, $state )
 		else
 		{
 			controller.currentQuestion++;
+			TimerService.restart();
 		}
 
 		controller.isFeedbackMode = false;
@@ -56,18 +67,30 @@ function QuestionController( $timeout, $state )
 		{
 			//answer is correct
 			console.log( "CORRECT!" );
+			GameDataService.incrementWins();
 		}
 		else
 		{
 			console.log( "INCORRECT!" );
+			GameDataService.incrementLosses();
 			//answer is incorrect - you lose
 		}
 
 		controller.currentFeedback = tFeedback;
 		controller.isFeedbackMode = true;
+		TimerService.pause();
 
-		//$state.go( 'timer' );
+		//call next question after time has passed
+		$timeout( controller.nextQuestion, controller.feedbackDuration );
+	}
 
+	controller.onTimeUp = function()
+	{
+		controller.currentFeedback = "YOU'RE OUT OF TIME!";
+		controller.isFeedbackMode = true;
+		GameDataService.incrementLosses();
+
+		//call next question after time has passed
 		$timeout( controller.nextQuestion, controller.feedbackDuration );
 	}
 }
