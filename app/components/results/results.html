@@ -1,5 +1,17 @@
-<h1>Results</h1>
-<h3>Correct Answers: {{ $ctrl.correct }}</h3>
-<h3>Incorrect Answers: {{ $ctrl.incorrect }}</h3>
-<button ng-click="$ctrl.restart()"> Restart </button>
+<div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<h1 class="text-center">Results</h1>
+			
+			<br/>
+
+			<p class="text-center">Correct Answers: {{ $ctrl.correct }}</p>
+			<p class="text-center">Incorrect Answers: {{ $ctrl.incorrect }}</p>
+
+			<br/>
+
+			<button class="center-block btn btn-primary btn-lg" ng-click="$ctrl.restart()"> Restart </button>
+		</div>
+	</div>
+</div>
 <!-- <button ng-click="$ctrl.getData()"> Data </button> -->
