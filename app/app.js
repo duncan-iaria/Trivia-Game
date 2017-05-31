@@ -2,32 +2,40 @@ var app = angular.module( 'trivia', [ 'ui.router' ] );
 
 app.config( function( $stateProvider, $urlRouterProvider )
 {
-  var mainState =
+  
+  $stateProvider.state( 'start', 
   {
-    name: 'main',
-    url: '/main',
-    component: 'main',
-  }
+    url: "",
+    views:
+    {
+      "starter": { component: 'starter' },
+    },
+  })
 
-  var timerState = 
+  .state( 'game', 
   {
-    name: 'timer',
-    url: '/timer',
-    component: 'timer',
-  }
+    url: "/game",
+    views:
+    {
+      "timer": { component: 'timer' },
+      "question": 
+      {
+        component: 'question',
+        bindings: { questions: 'questionsData' },
+      },
+    },
 
-  var questionState = 
+    resolve: 
+    { 
+      questionsData: function( QuestionService ){ return QuestionService.getAllQuestions(); },
+    }
+  })
+  .state( 'results', 
   {
-    name: 'question',
-    url: '/question',
-    component: 'question',
-    resolve: { 
-                questions: function( QuestionService ){ return QuestionService.getAllQuestions(); },
-                answers: function( QuestionService ){ return QuestionService.getAllAnswers(); } 
-              }
-  }
-
-  $stateProvider.state( mainState );
-  $stateProvider.state( timerState );
-  $stateProvider.state( questionState );
+    url: "/results",
+    views:
+    {
+      "results": { component: 'results' },
+    },
+  })
 });
