@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,13 +20,18 @@
 </head>
 
 <body ng-app="trivia">
-  
-  <a ui-sref="main" ui-sref-active="active">main</a>
-  <a ui-sref="timer" ui-sref-active="active">timer</a>
-  <a ui-sref="question" ui-sref-active="active">question</a>
-  <a ui-sref="results" ui-sref-active="active">results</a>
 
-  <ui-view></ui-view>
+  <!-- TEST NAV -->
+  <a ui-sref="main" ui-sref-active="active">main</a>
+  <a ui-sref="timer@main" ui-sref-active="active">timer</a>
+  <a ui-sref="question@main" ui-sref-active="active">question</a>
+  <a ui-sref="results" ui-sref-active="active">results</a>
+  <a ui-sref="game" ui-sref-active="active">game</a>
+
+  <div ui-view="starter"></div>
+  <div ui-view="timer"></div>
+  <div ui-view="question"></div>
+  <div ui-view="results"></div>
 
   <!-- Angular Add-ons -->
   <script src="app/vendor/angular-ui-router.min.js"></script>
@@ -35,6 +39,9 @@
 
   <script type="text/javascript" src="app/components/main/main.component.js"></script>
 
+  <!-- STARTER -->
+  <script type="text/javascript" src="app/components/starter/starter.component.js"></script>
+  
   <!-- TIMER -->
   <script type="text/javascript" src="app/components/timer/timer.controller.js"></script>
   <script type="text/javascript" src="app/components/timer/timer.component.js"></script>
