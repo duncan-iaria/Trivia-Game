@@ -1,56 +1,140 @@
 [
 	{ 
-		"question" : "What color is Sophie the dog?",
+		"question" : "What is the name of the space ship from the original film?",
 		
 		"answers" : 
 		[
 			{
-				"text" : "Red",
+				"text" : "The Nostromo",
 				"isCorrect" : true,
-				"feedback" : "Yas that is correct, she red!" 
+				"feedback" : "Yes, the ship was named the Nostromo!" 
 			},
 			{
-				"text" : "Blue",
+				"text" : "The Donnager",
 				"isCorrect" : false,
-				"feedback" : "I've never seen a blue dog before, have you?"
+				"feedback" : "No no no, that's from the Expanse"
 			},
 			{
-				"text" : "Green",
+				"text" : "Red 5",
 				"isCorrect" : false,
-				"feedback" : "She not an alien, you doofus."
+				"feedback" : "Come on, that's Luke's callsign in Star Wars!"
 			},
 			{
-				"text" : "Purple",
+				"text" : "The Rocinate",
 				"isCorrect" : false,
-				"feedback" : "I like purple, but that ain't right."
+				"feedback" : "That's the name of the ship in the Expanse, not Alien!"
 			}
 		]
 	},
 
 	{ 
-		"question" : "What is Sophie the dog's nickname?",
+		"question" : "'The Company' refers to... ",
 
 		"answers" : 
 		[
 			{
-				"text" : "Goofus",
+				"text" : "Greed Corp",
 				"isCorrect" : false,
-				"feedback" : "This was the only incorrect answer..." 
+				"feedback" : "No, that's the name of a game." 
 			},
 			{
-				"text" : "The Prime One",
-				"isCorrect" : true,
-				"feedback" : "Yes, she is the Prime One - the perfect dog."
+				"text" : "Space X",
+				"isCorrect" : false,
+				"feedback" : "No... that's a REAL company!"
 			},
 			{
-				"text" : "Mungus",
+				"text" : "Weyland-Yutani",
 				"isCorrect" : true,
-				"feedback" : "You're right! This is a weird one, I admit."
+				"feedback" : "That's the one!"
 			},
 			{
-				"text" : "Monkey",
+				"text" : "Ono-Sendai",
+				"isCorrect" : false,
+				"feedback" : "I like that answer, but it's not the right one. That's from Neuromancer."
+			}
+		]
+	},
+
+	{ 
+		"question" : "The Nostromo and crew responds to a distress call from which moon?",
+
+		"answers" : 
+		[
+			{
+				"text" : "THE Moon",
+				"isCorrect" : false,
+				"feedback" : "Come on... you know that ain't right!" 
+			},
+			{
+				"text" : "Acheron (LV-426)",
 				"isCorrect" : true,
-				"feedback" : "Correct, she is a monkey dog!"
+				"feedback" : "No... that's a REAL company!"
+			},
+			{
+				"text" : "Fiorina 161",
+				"isCorrect" : false,
+				"feedback" : "Nope, that's the prison planet from Alien 3!"
+			},
+			{
+				"text" : "Ilus",
+				"isCorrect" : false,
+				"feedback" : "No, that's a planet from the Expanse series."
+			}
+		]
+	},
+
+	{ 
+		"question" : "The alien that plants 'impregnates' people with alien babies through the mouth is referred to as what?",
+
+		"answers" : 
+		[
+			{
+				"text" : "Face Hugger",
+				"isCorrect" : true,
+				"feedback" : "Yes!" 
+			},
+			{
+				"text" : "Throat Impregnator",
+				"isCorrect" : false,
+				"feedback" : "No ... that's just... gross!"
+			},
+			{
+				"text" : "Biter",
+				"isCorrect" : false,
+				"feedback" : "Not quite."
+			},
+			{
+				"text" : "Mouth Breather",
+				"isCorrect" : false,
+				"feedback" : "Incorrect! Though those are bad too."
+			}
+		]
+	},
+
+	{ 
+		"question" : "What is the technical name of the alien that hatches from the chests of humans?",
+
+		"answers" : 
+		[
+			{
+				"text" : "Nostromo",
+				"isCorrect" : false,
+				"feedback" : "No - way off, that's the name of the ship!" 
+			},
+			{
+				"text" : "Xenoblade",
+				"isCorrect" : false,
+				"feedback" : "Close, but not quite!"
+			},
+			{
+				"text" : "Xenomorph",
+				"isCorrect" : true,
+				"feedback" : "Yes! You're woke!"
+			},
+			{
+				"text" : "Biter",
+				"isCorrect" : false,
+				"feedback" : "Incorrect! Thought they DO have a lot of teeth."
 			}
 		]
 	}
