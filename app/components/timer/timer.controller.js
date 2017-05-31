@@ -4,7 +4,7 @@ function TimerController( $interval, TimerService )
 	var controller = this;
 
 	controller.isEnabled = true;
-	controller.timeLimit = 4;
+	controller.timeLimit = 12;
 	controller.currentTime = controller.timeLimit;
 	controller.timerInterval;
 	
