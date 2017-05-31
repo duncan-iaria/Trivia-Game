@@ -29,3 +29,20 @@ h3
 {
 	cursor: pointer;
 }
+
+.content
+{
+	margin-top: 20px;
+}
+
+.starter-text
+{
+	text-align: center;
+	margin: 20px;
+}
+
+.timer
+{
+	text-align: center;
+	margin: 20px;
+}
