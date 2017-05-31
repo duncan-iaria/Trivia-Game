@@ -24,7 +24,8 @@ function QuestionController( $timeout, $state )
 
 		if( controller.currentQuestion >= controller.questions.length - 1 )
 		{
-			controller.currentQuestion = 0;
+			//controller.currentQuestion = 0;
+			$state.go( 'results' );
 		}
 		else
 		{
@@ -68,6 +69,5 @@ function QuestionController( $timeout, $state )
 		//$state.go( 'timer' );
 
 		$timeout( controller.nextQuestion, controller.feedbackDuration );
-
 	}
 }

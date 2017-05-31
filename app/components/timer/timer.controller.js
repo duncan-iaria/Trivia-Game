@@ -69,6 +69,7 @@ function TimerController( $interval )
 			controller.isEnabled = true;
 			controller.timerInterval = $interval( controller.tick, 1000 );
 		}
-
 	}
+
+	controller.startTimer();
 }
