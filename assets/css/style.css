@@ -25,7 +25,44 @@ h3
 	font-size: 1.5em;
 }
 
+.text-center
+{
+	text-align: center;
+}
+
 .answer
 {
+	color: #fff;
+	font-weight: bold;
 	cursor: pointer;
+	background-color: #00a9da;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 4px;
+}
+
+.answer:hover
+{
+	background-color: #009bc8;
+}
+
+.content
+{
+	margin-top: 20px;
+}
+
+.starter-text
+{
+	text-align: center;
+	margin: 20px;
+}
+
+.timer
+{
+	text-align: center;
+	margin: 20px;
+}
+
+.results
+{
 }

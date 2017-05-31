@@ -12,6 +12,9 @@
     <title>Trivia</title>
 
     <!-- STYLES -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- custom -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -27,11 +30,16 @@
   <a ui-sref="question@main" ui-sref-active="active">question</a>
   <a ui-sref="results" ui-sref-active="active">results</a>
   <a ui-sref="game" ui-sref-active="active">game</a> -->
-
-  <div ui-view="starter"></div>
-  <div ui-view="timer"></div>
-  <div ui-view="question"></div>
-  <div ui-view="results"></div>
+  <div class="container">
+    <div class="row">
+    	<div class="col-md-6 col-md-offset-3 well content">
+  	  <div ui-view="starter"></div>
+  	  <div ui-view="timer"></div>
+  	  <div ui-view="question"></div>
+  	  <div ui-view="results"></div>
+    </div>
+	</div>
+</div>
 
   <!-- Angular Add-ons -->
   <script src="app/vendor/angular-ui-router.min.js"></script>
